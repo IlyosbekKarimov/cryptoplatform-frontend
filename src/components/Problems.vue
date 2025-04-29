@@ -42,7 +42,7 @@ const userStore = useUserStore();
 const userScoreStore = useUserScoreStore();
 
 // olimpiada boshlanish vaqti
-const olimpiadStart = new Date('2025-04-29T13:50:00');
+const olimpiadStart = new Date('2025-05-01T10:00:00');
 const olimpiadEnd = new Date('2025-05-01T13:00:00');
 
 // Tanlangan masala faqat bitta bo‘ladi
