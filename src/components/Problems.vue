@@ -1,26 +1,16 @@
 <template>
     <div>
         <!-- Olimpiada vaqti komponenti -->
-        <OlimpiadTimer :start-time="olimpiadStart" :end-time="olimpiadEnd" @status-change="handleOlimpiadStatus" />
+        <!-- <OlimpiadTimer :start-time="olimpiadStart" :end-time="olimpiadEnd" @status-change="handleOlimpiadStatus" /> -->
 
         <h2 class="text-2xl font-bold mb-4 text-cyan-400">Kriptografiya Masalalari</h2>
 
-        <div v-if="olimpiadMessage" class="mb-6 p-4 rounded-lg" :class="olimpiadMessageClass">
+        <!-- <div v-if="olimpiadMessage" class="mb-6 p-4 rounded-lg" :class="olimpiadMessageClass">
             {{ olimpiadMessage }}
-        </div>
+        </div> -->
 
         <!-- Masalalar ro‘yxati -->
-        <ProblemList v-if="isOlimpiadActive" :selectProblem="selectProblem" />
-
-        <div v-else class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg text-center">
-            <p class="text-lg font-medium mb-2">{{ olimpiadStatusText }}</p>
-            <p v-if="timeUntilStart" class="text-sm text-gray-600 dark:text-gray-400">
-                Olimpiada boshlanishiga qolgan vaqt: {{ timeUntilStart }}
-            </p>
-            <p v-if="timeSinceEnd" class="text-sm text-gray-600 dark:text-gray-400">
-                Olimpiada tugagandan beri {{ timeSinceEnd }} vaqt o'tdi.
-            </p>
-        </div>
+        <ProblemList :selectProblem="selectProblem" />
 
         <!-- Tanlangan masala tafsilotlari faqat bitta chiqadi -->
         <ProblemDetail v-if="selectedProblem && isOlimpiadActive" :problem="selectedProblem" :submitSolution="submitSolution"
