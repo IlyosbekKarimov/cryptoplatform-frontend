@@ -13,7 +13,7 @@
         <ProblemList :selectProblem="selectProblem" />
 
         <!-- Tanlangan masala tafsilotlari faqat bitta chiqadi -->
-        <ProblemDetail v-if="selectedProblem && isOlimpiadActive" :problem="selectedProblem" :submitSolution="submitSolution"
+        <ProblemDetail v-if="selectedProblem" :problem="selectedProblem" :submitSolution="submitSolution"
             @close="selectedProblem = null" />
     </div>
 </template>
